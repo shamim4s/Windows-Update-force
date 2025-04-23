@@ -39,3 +39,20 @@ You can also bypass execution policy just for the command, like this:
 powershell -ExecutionPolicy Bypass -Command "Import-Module PSWindowsUpdate; Get-WindowsUpdate -AcceptAll -Install -AutoReboot"
 ```
 Let me know if you'd like to wrap all this into a script or a .ps1 file you can run easily next time.
+
+
+# Final all command 
+
+```
+Set-ExecutionPolicy RemoteSigned -Scope Process
+
+Import-Module PSWindowsUpdate
+
+Get-WindowsUpdate -AcceptAll -Install -AutoReboot
+```
+Optional: If You Still Have Issues
+You can also bypass execution policy just for the command, like this:
+
+```
+powershell -ExecutionPolicy Bypass -Command "Import-Module PSWindowsUpdate; Get-WindowsUpdate -AcceptAll -Install -AutoReboot"
+```
